@@ -20,7 +20,7 @@ end
 
 
 post '/calculate' do
-  "#{CreditCalculator.payment(params[:rate].to_f, params[:sum].to_f, params[:period].to_i)}
+  "#{CreditCalculator.new(params[:rate].to_f, params[:sum].to_f, params[:period].to_i).payment_history}
   <br>
   <a href='/calculator'>Back</a>"
 end
